@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.env
+.env.local
+*.log
+
+# Airflow
+logs/
+airflow.db
+airflow.cfg
+
+# Spark
+spark/checkpoints/
+tmp/
+*.crc
+*.snappy
+*.lz4
+*.avro
+*.parquet
+.DS_Store
+# Connector caches
+.ivy2/
+.m2/
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.pid
+*~ 
