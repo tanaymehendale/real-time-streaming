@@ -63,15 +63,12 @@ def stream_data():
         max_block_ms=5000,
         value_serializer=lambda v: json.dumps(v).encode('utf-8')
     )
+    
     logging.info(f"Finished KafkaProducer: {producer}")
-    # curr_time = time.time()
     end_at = time.time() + 60
     logging.info("Kafka Producer successful")
 
-    # while True:
     while time.time() < end_at:
-        # if time.time() > curr_time + 60: #1 minute
-        #     break
         try:
             res = format_data(get_data())
             logging.info("format_data() executed .... ")
